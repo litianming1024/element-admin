@@ -2,10 +2,13 @@
 
 > A admin system base on element-ui, vue router and vuex
 
+## Language
++ [中文](/README-zh.md)
+
 ## Notes
-* This is a fork of [Vue Admin](https://github.com/vue-bulma/vue-admin), the components of this project based on element-ui.
-* If you want a frame for production, I recommend you [Vue Admin](https://github.com/vue-bulma/vue-admin) or others stable frame.
-* No Responsive and Flexible Box Layout.
++ This is a fork of [Vue Admin](https://github.com/vue-bulma/vue-admin), the components of this project based on element-ui.
++ If you want a frame for production, I recommend you [Vue Admin](https://github.com/vue-bulma/vue-admin) or others stable frame.
++ No Responsive and Flexible Box Layout.
 
 ## TodoList
 - [ ] Responsive
