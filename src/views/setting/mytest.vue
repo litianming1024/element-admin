@@ -38,7 +38,6 @@
         }
       },
       test (val) {
-        console.debug(val)
         this.multipleSelection = val
         console.debug(this.multipleSelection)
       },
@@ -51,15 +50,24 @@
             type: 'primary',
             handler () {
               self.$message('new clicked')
-              self.$emit('refresh')
+              console.debug(self.multipleSelection)
+//              self.$emit('refresh')
             },
             icon: 'plus'
           }, {
             name: '修改',
+            type: 'info',
             handler () {
               self.$message('import clicked')
             },
             icon: 'upload'
+          }, {
+            name: '删除',
+            type: 'danger',
+            handler () {
+              self.$message('import clicked')
+            },
+            icon: 'delete'
           }]
         }
       }
