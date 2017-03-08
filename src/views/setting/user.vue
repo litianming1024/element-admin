@@ -31,7 +31,7 @@ export default {
           },
           icon: 'plus'
         }, {
-          name: '修改',
+          name: 'lala',
           handler () {
             console.debug('sadfsad')
           },

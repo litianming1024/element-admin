@@ -246,22 +246,12 @@
         this.$emit('selection-change', val)
       },
       refresh () {
-        this.currentPage = 1
-        console.debug('refresh')
+        console.debug('refresh accept')
         this.loadData()
       },
       handleIconClick (ev) {
         console.log(ev)
         this.loadData()
-      }
-    },
-    watch: {
-      innerPaginationDef: {
-        immediate: true,
-        handler (val) {
-          this.internalPageSize = val.pageSize
-          this.currentPage = val.currentPage
-        }
       }
     }
   }

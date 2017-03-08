@@ -1,5 +1,5 @@
 <template>
-  <base-data-table ref="base" :api-url="apiUrl" :fields="fields" :check-box-def="getCheckBoxDef()" @selection-change="test" :actions-def="getActionsDef()">
+  <base-data-table :api-url="apiUrl" :fields="fields" :check-box-def="getCheckBoxDef()" @selection-change="test" :actions-def="getActionsDef()">
   </base-data-table>
 </template>
 <script>
@@ -7,9 +7,6 @@
   export default {
     components: {
       BaseDataTable
-    },
-    created: function () {
-      this.$emit('refresh')
     },
     props: {
       apiUrl: {
