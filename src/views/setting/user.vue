@@ -1,5 +1,5 @@
 <template>
-  <mytest api-url="http://vuetable.ratiw.net/api/users" :actions-def="getActionsDef()">
+  <mytest api-url="/api/user" :actions-def="getActionsDef()">
 
   </mytest>
 </template>

@@ -51,6 +51,10 @@
         type: String,
         default: ''
       },
+      dataPath: {
+        type: String,
+        default: 'data'
+      },
       actionsDef: {
         type: Object,
         default () {
