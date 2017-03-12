@@ -5,23 +5,20 @@
 
     </base-data-table>
     <div>
-    <el-dialog title="收货地址" v-model="dialogFormVisible" >
-      <el-form>
-        <el-form-item label="活动名称">
-          <el-input auto-complete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="活动区域">
-          <el-select placeholder="请选择活动区域">
-            <el-option label="区域一" value="shanghai"></el-option>
-            <el-option label="区域二" value="beijing"></el-option>
-          </el-select>
-        </el-form-item>
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-      </div>
-    </el-dialog>
+      <el-dialog title="添加用户" v-model="dialogFormVisible" :modal-append-to-body="false">
+        <el-form :model="form">
+          <el-form-item label="用户名">
+            <el-input v-model="form.username"></el-input>
+          </el-form-item>
+          <el-form-item label="密码">
+            <el-input v-model="form.password"></el-input>
+          </el-form-item>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="dialogFormVisible = false">取 消</el-button>
+          <el-button type="primary" @click="addUser(form)">确 定</el-button>
+        </div>
+      </el-dialog>
     </div>
   </div>
 </template>
@@ -52,7 +49,11 @@
           }
         ],
         multipleSelection: [],
-        dialogFormVisible: false
+        dialogFormVisible: false,
+        form: {
+          username: '',
+          password: ''
+        }
       }
     },
     methods: {
@@ -64,6 +65,12 @@
       test (val) {
         this.multipleSelection = val
         console.debug(this.multipleSelection)
+      },
+      addUser (val) {
+        console.debug(val)
+        this.$http.post(this.apiUrl, val).then(response => {
+          this.dialogFormVisible = false
+        })
       },
       getActionsDef () {
         let self = this
