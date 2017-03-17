@@ -1,7 +1,6 @@
 # element-admin
 
-> 基于element-ui,vue router和vuex的通用后台管理模板
-
+> 基于element-ui,vue router和vuex的通用后台管理模板，目前暂停开发
 ## Notes
 * 这个工程代码大量借鉴（抄袭）了[Vue Admin](https://github.com/vue-bulma/vue-admin), 不同之处是组件是基于element-ui.
 * 如果你想寻求更稳定的模板，我推荐你使用 [Vue Admin](https://github.com/vue-bulma/vue-admin) 或其他稳定的模板.
